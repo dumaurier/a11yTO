@@ -1,0 +1,48 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  font-size: calc(1rem + 2vw);
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+.main{
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+nav{
+  width: 90vw;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  border: 1px solid grey;
+
+  a{
+    //flex: 1 1 0;
+    padding: 10px 5px;
+  }
+}
+
+@media (min-width: 800px){
+  html{
+    font-size: 100%;
+  }
+
+  .main{
+    width: 70vw;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Workopolis - a11y</title>
+  <meta name="description" content="a11yto Camp Toronto
+">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="http://workopolis.com/screenreaders">
+
+  <link type="application/atom+xml" rel="alternate" href="http://workopolis.com/feed.xml" title="Workopolis - a11y" />
+</head>
+
+
+  <body>
+
+    <main class="main" aria-label="Content">
+      <a href="\">home</a>
+
+      <h1 id="terry-bray">Terry Bray</h1>
+
+<h2 id="gtbray">@gtbray</h2>
+
+<p>Bank of Montreal - Looking for an engineer and an analyst</p>
+
+<p>Wants to make to more interactive. Become more like a11y camp is. Doesn’t want to tell us what the best screen reader is. Wants to help promote the use of screen readers are at a beginner level.</p>
+
+<p>Do you use it for testing?
+- yes
+- QA and UAT
+- Should use someone with a disability for UAT
+- Not all testing is done in Windows</p>
+
+<p><strong>Voice Over</strong></p>
+
+<ul>
+  <li>Not as customisable as other screen readers but must be supported.</li>
+  <li>Consolidate what you’re seeing with what you’re hearing.</li>
+  <li>Don’t rely too much on what you’re seeing.</li>
+  <li><strong>TURN THE MONITOR OFF</strong> when testing</li>
+</ul>
+
+<p>Voice Over changes the gestures. Changes core functionality of the OS. Swipe and touch.</p>
+
+<h3 id="bad-advice-use-the-tab-key-to-move-around-the-elements">BAD ADVICE: use the tab key to move around the elements.</h3>
+
+<p>This skips reading what is between the element! Links to links. Focusable element to focusable elements. Table cells. Inputs.</p>
+
+<p>They changed the way we interact.</p>
+
+<p><strong>Accelerator Keys</strong>
+Not available in  voice override</p>
+
+<ul>
+  <li>allow you to move quickly between elements on the Page</li>
+  <li>hotkeys for navigation</li>
+  <li>that is how the adaptive user should be using it</li>
+</ul>
+
+<p>When you’re testing, if you want to test if all the links are properly labelled. Press insert + f7, brings all links into a list.</p>
+
+<p><strong>Big mistake: no alt text on links!</strong>
+Oops!</p>
+
+<p>We have to make sure we’re doing this in single-page apps. Especially when the src is empty or void();</p>
+
+<p>Make sure the alt text is meaningful.</p>
+
+<p>Presents content in a way that is meaningful to the user. For the screen reader, they take that information and load it into a virtual buffer. The webpage, to the user looks like a Word document. The screen reader user ALWAYS reads a page top to bottom.</p>
+
+<p><strong>Turn of automatic reading of the page</strong></p>
+
+<h2 id="ads---how-to-deal-with-them">Ads - how to deal with them</h2>
+
+<p>Are the ads relevant to the screen reader user? If they’re at meaningful you should hide them.</p>
+
+<ul>
+  <li>try to keep the colour contrast to one that is easy to use.</li>
+  <li>don’t care what colours we use</li>
+  <li>how we format that add</li>
+  <li>try to text simple. keep it descriptive.</li>
+  <li>if you want to communicate to screen reader user - put the text in the background as same colour as the background itself.</li>
+  <li>This is information only available to screen readers.</li>
+  <li>don’t put too much of a description in the alt tag. The screen reader can’t interrupt it.</li>
+</ul>
+
+<h2 id="content-order">Content Order</h2>
+
+<ul>
+  <li>
+    <p>tabindex. if you keep the tab order correctly. as long as that is good, then it will read it in that order.</p>
+  </li>
+  <li>keep it in the CSS - gives the user control</li>
+  <li>hidden text: -9999px trick. it might read it. Anything is visibly or invisible will be loaded by the screenreader.</li>
+  <li>overlays can confuse screen readers. it reads the new content on top of the old content.</li>
+  <li>be careful with interactions</li>
+</ul>
+
+<h2 id="usability-on-a11y">Usability on a11y</h2>
+
+<ul>
+  <li>running UX tests for screenreaders</li>
+  <li>UAT Testing - there are people that do this all the time</li>
+  <li>Not a big fan of companies using people with disability to do UAT unless it’s their job</li>
+</ul>
+
+<h2 id="for-people-that-know-nothing-about-screen-readers">For People that Know Nothing about Screen readers</h2>
+<ul>
+  <li>take a course</li>
+  <li>find someone in the community</li>
+  <li>it is possible to learn you to use one of your own but it can be very frustrating.</li>
+  <li>Disconnect the mouse and the monitor</li>
+  <li>Always learn to use the tools fully.</li>
+</ul>
+
+<h3 id="open-source-tools-and-a11y---wordpressjoomla">Open source tools and a11y - WordPress/Joomla</h3>
+<p>Did they bother to install the Accessibility plugins. It comes back to the developers to put in the effort to make it so.</p>
+
+<p><strong>Solved at the development level</strong></p>
+
+    </main>
+
+  </body>
+
+</html>
